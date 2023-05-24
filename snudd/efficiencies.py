@@ -11,6 +11,12 @@ XNT_NR_DATA = np.loadtxt(config.get_data("exps/xnt/XNT_NR.dat"), unpack=True)
 XNT_ER_DATA = np.loadtxt(config.get_data("exps/xnt/XNT_ER.dat"), unpack=True)
 
 
+
+LZ_NR_22 =np.loadtxt(config.get_data("exps/lz/LZ_NR_first_data.txt"), unpack=True)
+LZ_NR_22 = np.array([LZ_NR_22[0][LZ_NR_22[1] > 0.0], LZ_NR_22[1][LZ_NR_22[1] > 0.0]]) ### get rid of the zero entries because they mess up with the interpolation
+XNT_ER_22 = np.loadtxt(config.get_data("exps/xnt/XNT_ER_22.csv"), delimiter=',', unpack=True)
+
+
 def linear_extend_strategy(E_R, E_thresh_50_new, efficiency):
     """Return linearly extended efficiency."""
     shift = efficiency.threshold_50 - E_thresh_50_new
@@ -100,6 +106,16 @@ threshold_50_xnt_nr = efficiency_xnt_nr.threshold_50
 
 efficiency_xnt_er = Efficiency(XNT_ER_DATA)
 threshold_50_xnt_er = efficiency_xnt_er.threshold_50
+
+
+
+######################
+efficiency_lz_nr_22 = Efficiency(LZ_NR_22)
+threshold_50_lux_nr_22 = efficiency_lz_nr_22.threshold_50 
+
+
+efficiency_xnt_er_22 = Efficiency(XNT_ER_22)
+threshold_50_xnt_er_22 = efficiency_xnt_er_22.threshold_50
 
 if __name__ == "__main__":
     from matplotlib import pyplot as plt

@@ -10,7 +10,8 @@ import numpy as np
 from scipy.interpolate import InterpolatedUnivariateSpline
 
 import snudd.config as config
-from snudd.targets import nucleus_ge, nucleus_xe
+#from snudd.targets import nucleus_ge, nucleus_xe
+from snudd.targets import nucleus_xe
 
 
 class Quenching:
