@@ -3,7 +3,7 @@ import numpy as np
 from scipy.interpolate import InterpolatedUnivariateSpline
 from scipy.optimize import root_scalar, brentq
 
-from nuddnsi import config
+from snudd import config
 
 LZ_NR_DATA = np.loadtxt(config.get_data("exps/lz/LZ_NR.dat"), unpack=True)
 LZ_ER_DATA = np.loadtxt(config.get_data("exps/lz/LZ_ER.dat"), unpack=True)
