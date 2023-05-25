@@ -1,7 +1,16 @@
 # SNuDD
 
+[![arXiv](http://img.shields.io/badge/arXiv-2302.12846-B31B1B.svg)](https://arxiv.org/abs/2302.12846)
+
 **SNuDD** (**S**olar **N**e**u**trinos for **D**irect **D**etection) is a python package for accurate computations of solar neutrino scattering rates at direct detection (DD) experiments in the presence of non-standard neutrino interactions (NSI). 
 **SNuDD**  was developed and utilised for the NSI sensitivity estimates of the xenon-based DD experiments XENON, LUX-ZEPLIN and DARWIN in [*A direct detection view of the neutrino NSI landscape*](https://arxiv.org/abs/2302.12846).
+
+When using **SNuDD**, please cite:
+
+D. W. P. Amaral, D. Cerdeno, A. Cheek and P. Foldenauer, \
+*A direct detection view of the neutrino NSI landscape*,\
+[arXiv:2302.12846 [hep-ph]].
+
 
 
 ## Prerequisites
@@ -30,7 +39,12 @@ tar -xzvf master.tar.gz
 mv SNuDD-main SNuDD
 ```
 
-**SNuDD** can then be locally installed by running:
+**SNuDD** can be locally installed from the directory containing the `SNuDD` repository by running:
 ```bash
-pip install -e snudd
+pip install -e SNuDD
 ```
+
+
+## Bugs
+
+**SNuDD** is a work in progress and so far is in an *alpha* release stage. If you find any bugs, please report them by creating an `Issue` on the project [GitHub](https://github.com/dwpamaral/SNuDD) page.
